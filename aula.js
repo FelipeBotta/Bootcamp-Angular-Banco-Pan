@@ -3,16 +3,17 @@
 
 const pessoa = {
     nome: "Luis Felipe",
-    idade: 24
+    idade: 24,
+    
+    descrever: function (){
+        console.log(`Meu nome e ${this.nome} e minha idade e ${this.idade}`);
+    }
 } ;
 
 
-pessoa.altura = 176;
-
-console.log(pessoa.nome);
-console.log(pessoa.idade);
-console.log(pessoa.altura);
-console.log(pessoa);
+const atributo = 'idade';
 
 
+pessoa['idade'] = 30;
 
+console.log(pessoa['idade']);
