@@ -1,9 +1,21 @@
 
 
-const alunos = ['Joao','Felipe','Roberto'];
+const notas = [];
 
-alunos.push('Gabriela');
+notas.push(4);
+notas.push(7);
+notas.push(8);
+notas.push(10);
+notas.push(6);
 
-alunos[4] = 'Vincius'
+let soma = 0;
 
-console.log(alunos);
+for (let i = 0; i < notas.length; i++){
+    const nota = notas[i];
+    soma = soma + nota;
+}
+
+const media = soma / notas.length;
+
+console.log(soma);
+console.log(media);
