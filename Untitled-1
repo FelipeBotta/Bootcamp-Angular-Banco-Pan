@@ -1,0 +1,42 @@
+Requisição HTTP
+
+URL: https://pokeapi.co/api/v2/pokemon
+
+Request Method: GET | POST | PUT | DELETE
+
+get = pesquisar
+post = incluir
+put = atualizar
+delete = deletar
+
+
+Request Headers / Response Headers:
+  content-type: application/json
+
+
+Request Body:
+{
+  "name:" "teste"
+}
+
+Status Code:
+
+Atraves do status code sabemos se a solicitacao deu erro, caso seja entra 200-299 deu tudo certo.
+
+Response Headers
+
+Response Body
+
+
+
+Query String
+
+URL: https://pokeapi.co/api/v2/pokemon?type=grass&name=i
+
+ex = pesquisar os pokemons do tipo grass que iniciam com i
+
+Paginacao
+
+URL: https://pokeapi.co/api/v2/pokemon?offset=4&limit=2
+
+ex = offset seria a pagina e o limit seria a quantidade de itens por pagina
