@@ -15,6 +15,18 @@
     -moz-box-shadow: 9px 9px 27px 0px rgba(0,0,0,0.75);;
 }
 
+span{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+span > img{
+    margin-right: 10px;
+    width: 25px;
+    border-radius: 50%;
+}
+
 .card__left{
     display: flex;
     flex-direction: column;
