@@ -32,4 +32,13 @@ let boleto = ["agua conta", 199.90, 312435];
 dados.pop();
 //Datas
 let aniversario = new Date("2022-12-01 05:00");
-console.log(aniversario.toString());
+//function
+function addNumber(x, y) {
+    return x + y;
+}
+function addToHello(name) {
+    return `Hello ${name}`;
+}
+let soma = addNumber(4, 7);
+console.log(soma);
+console.log(addToHello("Felipe"));
