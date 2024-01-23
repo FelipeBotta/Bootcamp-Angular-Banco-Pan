@@ -70,7 +70,10 @@
         return `Hello ${name}`;
     }
 
+    function CallToPhone(phone: number | string){
+        return phone;
+    }
+
     let soma: number = addNumber(4,7);
 
-    console.log(soma);
-    console.log(addToHello("Felipe"));
+    console.log(CallToPhone(31452233));

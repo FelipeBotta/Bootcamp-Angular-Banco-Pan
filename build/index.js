@@ -39,6 +39,8 @@ function addNumber(x, y) {
 function addToHello(name) {
     return `Hello ${name}`;
 }
+function CallToPhone(phone) {
+    return phone;
+}
 let soma = addNumber(4, 7);
-console.log(soma);
-console.log(addToHello("Felipe"));
+console.log(CallToPhone(31452233));
