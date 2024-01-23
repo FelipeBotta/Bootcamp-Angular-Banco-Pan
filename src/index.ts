@@ -11,5 +11,5 @@
     let indefinido: undefined = undefined;
 
     //tipos abrangentes
-    let retorno:void
-    let retornoView: any = 1;
+    let retorno:void //sem retorno
+    let retornoView: any = 1; //retorno que nao sabemos o que ira retornar
