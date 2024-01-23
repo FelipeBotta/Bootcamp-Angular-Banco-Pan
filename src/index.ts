@@ -13,3 +13,39 @@
     //tipos abrangentes
     let retorno:void //sem retorno
     let retornoView: any = 1; //retorno que nao sabemos o que ira retornar
+
+
+    //objeto - sem previsibilidade
+    let produto: object = {
+        name:"Felipe",
+        city:"Cruzeiro",
+        age:24,
+        gender:"Masculino"
+    };
+
+    //objeto tipado - com previsibilidade
+
+    type ProdutoLoja = {
+        nome:string;
+        preco:number;
+        unidades:number;
+    };
+
+    let meuProduto:ProdutoLoja = {
+        nome:"Tenis",
+        preco: 89.99,
+        unidades: 5
+    }
+
+    //arrays
+
+    let dados:string[] = ["felipe","gabriela","flora"]
+
+    let dados2: Array<string> = ["felipe","gabriela","flora"]
+
+    let infos:(string | number)[] = ["felipe",24, "gabriela", 23] //array com multiplos tipos
+
+
+    //tuplas
+
+    
