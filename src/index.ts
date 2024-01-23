@@ -48,4 +48,15 @@
 
     //tuplas
 
+    let boleto:[string,number,number] = ["agua conta", 199.90,312435];
+
+
+    //metodos arrays
     
+
+    dados.pop();
+
+    //Datas
+
+    let aniversario:Date = new Date("2022-12-01 05:00")
+    console.log(aniversario.toString());
