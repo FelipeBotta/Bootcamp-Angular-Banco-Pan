@@ -59,4 +59,17 @@
     //Datas
 
     let aniversario:Date = new Date("2022-12-01 05:00")
-    console.log(aniversario.toString());
+
+     //function
+
+     function addNumber(x: number, y: number):number{
+        return x + y;
+    }
+
+    function addToHello(name: string):string{
+        return `Hello ${name}`;
+    }
+
+    let soma: number = addNumber(4,7);
+
+    console.log(soma);
