@@ -1,79 +1,40 @@
+//interfaces
+type robot = {
+    readonly id:number| string;
+    name:string
+};
+
+interface robot2 {
+    readonly id:number|string,
+    name:string;
+    sayHello():string;
+
+} //readonly inviabiliza a modificacao da propriedade
+
+const bot1:robot = {
+    id:1,
+    name:"Mega-man"
+}
+
+const bot2:robot2 = {
+    id:1,
+    name:"Mega-man",
+    sayHello: function():string{throw new Error("Function not implemented.")}
+}
     
-    //tipos primitivos
-    let ligado: boolean = false;
-    let nome: string = "felipe";
-    let idade: number = 24;
-    let altura: number = 1.76;
-    
-    
-    //tipos especiais
-    let nulo: null = null;
-    let indefinido: undefined = undefined;
+class Pessoa implements robot2{
+    id: string | number;
+    name: string;
 
-    //tipos abrangentes
-    let retorno:void //sem retorno
-    let retornoView: any = 1; //retorno que nao sabemos o que ira retornar
+    constructor(id: string|number, name: string){
+        this.id = id
+        this.name = name
 
-
-    //objeto - sem previsibilidade
-    let produto: object = {
-        name:"Felipe",
-        city:"Cruzeiro",
-        age:24,
-        gender:"Masculino"
-    };
-
-    //objeto tipado - com previsibilidade
-
-    type ProdutoLoja = {
-        nome:string;
-        preco:number;
-        unidades:number;
-    };
-
-    let meuProduto:ProdutoLoja = {
-        nome:"Tenis",
-        preco: 89.99,
-        unidades: 5
     }
-
-    //arrays
-
-    let dados:string[] = ["felipe","gabriela","flora"]
-
-    let dados2: Array<string> = ["felipe","gabriela","flora"]
-
-    let infos:(string | number)[] = ["felipe",24, "gabriela", 23] //array com multiplos tipos
-
-
-    //tuplas
-
-    let boleto:[string,number,number] = ["agua conta", 199.90,312435];
-
-
-    //metodos arrays
-    
-
-    dados.pop();
-
-    //Datas
-
-    let aniversario:Date = new Date("2022-12-01 05:00")
-
-     //function
-
-     function addNumber(x: number, y: number):number{
-        return x + y;
+    sayHello(): string {
+        return `Hello ${this.name}`;
     }
+}
 
-    function addToHello(name: string):string{
-        return `Hello ${name}`;
-    }
-
-    function CallToPhone(phone: number | string){
-        return phone;
-    }
-
-    let soma: number = addNumber(4,7);
-
-    console.log(CallToPhone(31452233));
+const p = new Pessoa(1,"Felipe");
+console.log(p.sayHello());

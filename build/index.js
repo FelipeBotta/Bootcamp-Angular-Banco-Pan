@@ -1,46 +1,21 @@
 "use strict";
-//tipos primitivos
-let ligado = false;
-let nome = "felipe";
-let idade = 24;
-let altura = 1.76;
-//tipos especiais
-let nulo = null;
-let indefinido = undefined;
-//tipos abrangentes
-let retorno; //sem retorno
-let retornoView = 1; //retorno que nao sabemos o que ira retornar
-//objeto - sem previsibilidade
-let produto = {
-    name: "Felipe",
-    city: "Cruzeiro",
-    age: 24,
-    gender: "Masculino"
+const bot1 = {
+    id: 1,
+    name: "Mega-man"
 };
-let meuProduto = {
-    nome: "Tenis",
-    preco: 89.99,
-    unidades: 5
+const bot2 = {
+    id: 1,
+    name: "Mega-man",
+    sayHello: function () { throw new Error("Function not implemented."); }
 };
-//arrays
-let dados = ["felipe", "gabriela", "flora"];
-let dados2 = ["felipe", "gabriela", "flora"];
-let infos = ["felipe", 24, "gabriela", 23]; //array com multiplos tipos
-//tuplas
-let boleto = ["agua conta", 199.90, 312435];
-//metodos arrays
-dados.pop();
-//Datas
-let aniversario = new Date("2022-12-01 05:00");
-//function
-function addNumber(x, y) {
-    return x + y;
+class Pessoa {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    sayHello() {
+        return `Hello ${this.name}`;
+    }
 }
-function addToHello(name) {
-    return `Hello ${name}`;
-}
-function CallToPhone(phone) {
-    return phone;
-}
-let soma = addNumber(4, 7);
-console.log(CallToPhone(31452233));
+const p = new Pessoa(1, "Felipe");
+console.log(p.sayHello());
