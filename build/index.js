@@ -1,21 +1,14 @@
 "use strict";
-const bot1 = {
-    id: 1,
-    name: "Mega-man"
-};
-const bot2 = {
-    id: 1,
-    name: "Mega-man",
-    sayHello: function () { throw new Error("Function not implemented."); }
-};
-class Pessoa {
-    constructor(id, name) {
-        this.id = id;
+//classes
+class Character {
+    constructor(name, stregth, skill) {
         this.name = name;
+        this.stregth = stregth;
+        this.skill = skill;
     }
-    sayHello() {
-        return `Hello ${this.name}`;
+    attack() {
+        console.log(`Attack with ${this.stregth} points`);
     }
 }
-const p = new Pessoa(1, "Felipe");
-console.log(p.sayHello());
+const p1 = new Character("Bottas", 10, 5);
+p1.attack();

@@ -1,40 +1,20 @@
-//interfaces
-type robot = {
-    readonly id:number| string;
-    name:string
-};
+//classes
 
-interface robot2 {
-    readonly id:number|string,
-    name:string;
-    sayHello():string;
+class Character{
+    name?: string;
+    stregth: number;
+    skill: number;
 
-} //readonly inviabiliza a modificacao da propriedade
-
-const bot1:robot = {
-    id:1,
-    name:"Mega-man"
-}
-
-const bot2:robot2 = {
-    id:1,
-    name:"Mega-man",
-    sayHello: function():string{throw new Error("Function not implemented.")}
-}
-    
-class Pessoa implements robot2{
-    id: string | number;
-    name: string;
-
-    constructor(id: string|number, name: string){
-        this.id = id
-        this.name = name
-
+    constructor(stregth:number,skill:number){
+        this.stregth = stregth;
+        this.skill = skill;
     }
-    sayHello(): string {
-        return `Hello ${this.name}`;
+
+    attack():void{
+        console.log(`Attack with ${this.stregth} points`)
+
     }
 }
 
-const p = new Pessoa(1,"Felipe");
-console.log(p.sayHello());
+const p1 = new Character(10,5);
+p1.attack();
